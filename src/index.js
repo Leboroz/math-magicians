@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom'
 import './sass/index.scss'
 import reportWebVitals from './reportWebVitals'
 
+const App = () => {
+  return <h1>hello world!</h1>
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
