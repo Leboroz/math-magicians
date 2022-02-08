@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sass/index.scss';
-import reportWebVitals from './reportWebVitals';
+import Calculator from './components/calculator';
 
-const App = () => <h1>hello world!</h1>;
+const App = () => <Calculator />;
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,8 +11,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
