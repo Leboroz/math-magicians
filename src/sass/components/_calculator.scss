@@ -1,0 +1,30 @@
+@use '../globals' as *;
+
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+
+  .dysplay {
+    background-color: $secondary;
+    color: white;
+    width: 100%;
+    text-align: end;
+    padding: 1rem;
+  }
+
+  .calculator_button {
+    background-color: $white;
+    border-width: 0.5px;
+    width: 25%;
+    padding-block: 1rem;
+
+    &:nth-child(18) {
+      width: 50%;
+    }
+
+    &_operator {
+      background-color: $blue;
+    }
+  }
+}
