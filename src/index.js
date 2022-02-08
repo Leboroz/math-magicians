@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './sass/index.scss';
-import Calculator from './components/calculator';
-
-const App = () => <Calculator />;
+import App from './components/app';
 
 ReactDOM.render(
   <React.StrictMode>
