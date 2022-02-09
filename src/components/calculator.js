@@ -16,7 +16,9 @@ class Calculator extends React.Component {
       case 'x':
       case '-':
       case '+':
-        this.setState({ ...this.state, operation: button });
+        this.setState({ operation: button }, () => this.state);
+        break;
+      default:
     }
     const { total, next, operation } = this.state;
     this.setState(calculate({ total, next, operation }, button));
@@ -52,11 +54,7 @@ class Calculator extends React.Component {
         <span className="display">
           {total && next && operation
             ? `${total} ${operation} ${next}`
-            : next
-            ? next
-            : total
-            ? total
-            : '0'}
+            : next || total || '0'}
         </span>
         {buttons.map((text) => (
           <button
