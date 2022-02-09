@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body{align-items:center;display:flex;justify-content:center;margin:0 auto;min-height:100vh}.calculator{display:flex;flex-wrap:wrap;width:500px}.calculator .display{background-color:#393e46;color:#fff;padding:1rem;text-align:end;width:100%}.calculator .calculator_button{background-color:#eee;border-width:.5px;padding-block:1rem;width:25%}.calculator .calculator_button:nth-child(18){width:50%}.calculator .calculator_button_operator{background-color:#00adb5}
+/*# sourceMappingURL=main.232aafaf.css.map*/
