@@ -1,10 +1,25 @@
 import React from 'react';
-import Button from './button';
+import calculate from './logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { dysplay: 0 };
+    this.state = { total: null, next: null, operation: null };
+    this.buttonOnClickHandler = this.buttonOnClickHandler.bind(this);
+  }
+
+  buttonOnClickHandler(e) {
+    const button = e.target.textContent;
+    switch (button) {
+      case '%':
+      case '÷':
+      case 'x':
+      case '-':
+      case '+':
+        this.setState({ ...this.state, operation: button });
+    }
+    const { total, next, operation } = this.state;
+    this.setState(calculate({ total, next, operation }, button));
   }
 
   render() {
@@ -30,15 +45,33 @@ class Calculator extends React.Component {
       ['=', 'operator'],
     ];
 
-    const { dysplay } = this.state;
+    const { total, next, operation } = this.state;
 
     return (
       <div className="calculator">
-        <span className="dysplay">{dysplay}</span>
+        <span className="display">
+          {total && next && operation
+            ? `${total} ${operation} ${next}`
+            : next
+            ? next
+            : total
+            ? total
+            : '0'}
+        </span>
         {buttons.map((text) => (
-          <Button operator={text[1]} key={text[0]}>
+          <button
+            onClick={this.buttonOnClickHandler}
+            type="button"
+            className={
+              text[1]
+                ? `calculator_button calculator_button_${text[1]}`
+                : 'calculator_button'
+            }
+            aria-label="calculator_btn"
+            key={text[0]}
+          >
             {text[0]}
-          </Button>
+          </button>
         ))}
       </div>
     );
