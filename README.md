@@ -110,6 +110,14 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/leboroz/math-magicians/issues/).
 
+## Acknowledgments
+
+👤 **Melanie Sigrid**
+
+- GitHub: [@melaniesigrid](https://github.com/melaniesigrid)
+- Twitter: [@SiriMoon11](https://twitter.com/SiriMoon11)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/melanie-arellano-92aaa9194/)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
