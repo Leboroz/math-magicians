@@ -9,9 +9,11 @@ $white: #eee;
 
 body {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background-color: $primary;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.padding-x {
+  padding-inline: 3rem;
 }
