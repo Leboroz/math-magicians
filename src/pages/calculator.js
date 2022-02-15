@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import calculate from './logic/calculate';
+import calculate from '../components/logic/calculate';
+import styles from '../sass/components/calculator.module.scss';
 
 const Calculator = () => {
   const [total, setTotal] = useState(null);
@@ -52,9 +54,21 @@ const Calculator = () => {
     ['=', 'operator'],
   ];
 
+  const {
+    calculator,
+    calculator_button: calculatorButton,
+    calculator_button_operator: calculatorButtonOperator,
+    display,
+  } = styles;
+
   return (
-    <div className="calculator">
-      <span className="display">
+    <motion.div
+      key="calculator"
+      initial={{ x: 50, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      className={calculator}
+    >
+      <span className={display}>
         {total && next && operation
           ? `${total} ${operation} ${next}`
           : next || total || '0'}
@@ -65,8 +79,8 @@ const Calculator = () => {
           type="button"
           className={
             text[1]
-              ? `calculator_button calculator_button_${text[1]}`
-              : 'calculator_button'
+              ? `${calculatorButton} ${calculatorButtonOperator}`
+              : calculatorButton
           }
           aria-label="calculator_btn"
           key={text[0]}
@@ -74,7 +88,7 @@ const Calculator = () => {
           {text[0]}
         </button>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
