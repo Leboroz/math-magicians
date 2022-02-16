@@ -59,36 +59,42 @@ const Calculator = () => {
     calculator_button: calculatorButton,
     calculator_button_operator: calculatorButtonOperator,
     display,
+    container,
   } = styles;
 
   return (
-    <motion.div
-      key="calculator"
-      initial={{ x: 50, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      className={calculator}
-    >
-      <span className={display}>
-        {total && next && operation
-          ? `${total} ${operation} ${next}`
-          : next || total || '0'}
-      </span>
-      {buttons.map((text) => (
-        <button
-          onClick={buttonOnClickHandler}
-          type="button"
-          className={
-            text[1]
-              ? `${calculatorButton} ${calculatorButtonOperator}`
-              : calculatorButton
-          }
-          aria-label="calculator_btn"
-          key={text[0]}
-        >
-          {text[0]}
-        </button>
-      ))}
-    </motion.div>
+    <section className={`${styles['padding-x']} ${styles['padding-top']}`}>
+      <motion.div
+        key="calculator"
+        initial={{ x: '10%', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        className={container}
+      >
+        <h2 className={styles['display-2']}>Lets do some math</h2>
+        <div className={calculator}>
+          <span className={display}>
+            {total && next && operation
+              ? `${total} ${operation} ${next}`
+              : next || total || '0'}
+          </span>
+          {buttons.map((text) => (
+            <button
+              onClick={buttonOnClickHandler}
+              type="button"
+              className={
+                text[1]
+                  ? `${calculatorButton} ${calculatorButtonOperator}`
+                  : calculatorButton
+              }
+              aria-label="calculator_btn"
+              key={text[0]}
+            >
+              {text[0]}
+            </button>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 };
 

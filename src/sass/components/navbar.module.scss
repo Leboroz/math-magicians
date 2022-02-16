@@ -20,7 +20,7 @@
     .links {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 3rem;
 
       .link {
         color: #fff;
@@ -42,7 +42,7 @@
 
         &:hover::after {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(5px);
         }
       }
     }

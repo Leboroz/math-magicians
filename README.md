@@ -14,7 +14,7 @@
 - React.js
 - babel
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://leboroz.github.io/math-magicians/)
 

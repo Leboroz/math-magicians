@@ -1,5 +1,10 @@
 @use '../globals' as *;
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .calculator {
   display: flex;
   flex-wrap: wrap;
