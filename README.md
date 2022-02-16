@@ -4,7 +4,9 @@
 
 > JavaScript application that contains a calculator and three sub-pages. Built with React + SASS.
 
-![calculator](./public/calculator.png)
+![home](./public/app-1.png)
+![calculator](./public/app-2.png)
+![quote](./public/app-3.png)
 
 ## Built With
 
