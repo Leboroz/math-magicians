@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "depoy": "gh-pages -d build --repo https://github.com/Leboroz/math-magicians.git"
+    "deploy": "gh-pages -d build --repo https://github.com/Leboroz/math-magicians.git"
   },
   "eslintConfig": {
     "extends": [
