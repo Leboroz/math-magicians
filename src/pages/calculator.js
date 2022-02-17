@@ -72,7 +72,7 @@ const Calculator = () => {
       >
         <h2 className={styles['display-2']}>Lets do some math</h2>
         <div className={calculator}>
-          <span className={display}>
+          <span className={display} data-testid="screen">
             {total && next && operation
               ? `${total} ${operation} ${next}`
               : next || total || '0'}
